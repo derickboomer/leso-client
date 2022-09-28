@@ -117,9 +117,13 @@ function CreateRequest() {
               <div class="col">
                 <label class="font-weight-bold" for="inputEmail4"> Problem Reported </label> <br /> 
                 <textarea style={{ height: "150px", width: "100%", borderRadius: "5px"}} name="" id="" placeholder="  To be filled by the technican the during the inspection." disabled ></textarea>
-              </div>
+              </div> 
+
+              
+
             </div>
             
+            <input class="m-3 btn btn-primary" type="submit" value="Submit"></input>
             
           </form>
         </div>
