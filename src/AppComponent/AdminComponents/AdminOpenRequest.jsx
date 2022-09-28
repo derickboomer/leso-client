@@ -2,22 +2,15 @@ import React from "react";
 import { NavLink, Route, HashRouter, useParams } from "react-router-dom";
 
 function OpenRequest() {
-  const { id } = useParams();
+  
+  
 
   return (
     <React.Fragment>
       <span style={{ backgroundColor: "rgb(255, 246, 225)" }}>
         {/* prettier-ignore */}
 
-        <div
-          class=""
-          style={{
-            backgroundColor: "white",
-            borderRadius: "5px",
-            boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
-          }}
-          className="p-3"
-        >
+        <div class="" style={{backgroundColor: "white", borderRadius: "5px",boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}} className="p-3" >
           <div class="h4 font-weight-bold">Open Request Dashboard</div>
 
           <div class="d-flex" className="dashboardcontents">
@@ -25,9 +18,10 @@ function OpenRequest() {
               <div class="card-body text-light font-weight-bold ">
                 <div className="d-flex justify-content-start ">
                   Total Requests
+                  
                 </div>
                 <div className="d-flex justify-content-start pr-5 count display-4">
-                  1
+                
                 </div>
               </div>
             </button>

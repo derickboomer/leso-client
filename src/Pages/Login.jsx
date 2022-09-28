@@ -59,6 +59,27 @@ function Login({ Login, error }) {
                   <input type="password" id="password" class="form-control p-2" placeholder="Password"/>
                   
                 </div>
+              
+                <div class="d-flex justify-content-center"><strong>What is the type of your account?</strong></div> {/* Type of Account credential */}
+
+                <div class="d-flex justify-content-center" >  {/* Radio Buttons*/}
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"></input>
+                    <label class="form-check-label" for="inlineRadio1">Administrator</label>
+                  </div> 
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"></input>
+                    <label class="form-check-label" for="inlineRadio1">Technician</label>
+                  </div> 
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"></input>
+                    <label class="form-check-label" for="inlineRadio1">Client</label>
+                  </div> 
+                <br /> <br />
+                </div> 
 
                 
                 <button type="submit" class="btn btn-warning btn-lg mb-1 ">
