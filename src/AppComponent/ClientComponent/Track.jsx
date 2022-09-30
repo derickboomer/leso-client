@@ -6,7 +6,7 @@ function Track() {
     <div className="trackcontainer " style={{backgroundColor: "white",borderRadius: "5px",boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",}}>
         
         <div className=" p-2 h3 font-weight-bold "> {/* Job Order Form */}
-            Open Job Order Requests
+            Recent Job Order Requests
           </div>  
 
       <div className="mt-2 table">
@@ -38,15 +38,16 @@ function Track() {
               <tr>
 
                 
-                <td>Telescope</td>
-                <td>Repair</td>
-                <td>Jackson</td>
-                <td>For Approval</td>
-                <td>On-going</td>
-                <td>02145</td>
+                <td className="align-middle">Telescope</td>
+                <td className="align-middle">Repair</td>
+                <td className="align-middle">Jackson</td>
+                <td className="align-middle">For Approval</td>
+                <td className="align-middle">On-going</td>
+                <td className="align-middle">02145</td>
                 <td>
-                  <button className="mr-1">View</button>
-                  <button>Delete</button>
+                <button type="button" class="btn btn-primary mr-2 " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Edit</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Delete</button>
+                
                 </td>
               </tr>
             </tbody>

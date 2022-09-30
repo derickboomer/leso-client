@@ -62,14 +62,15 @@ function AdminClosedRequest() {
 
             <tbody>
               <tr>
-                <td>Rhoderick</td>
-                <td>02145</td>
-                <td>Telescope</td>
-                <td>Repair</td>
-                <td>Jackson</td>
-                <td>Completed</td>
+                <td className="align-middle">Rhoderick</td>
+                <td className="align-middle">02145</td>
+                <td className="align-middle">Telescope</td>
+                <td className="align-middle">Repair</td>
+                <td className="align-middle">Jackson</td>
+                <td className="align-middle">Completed</td>
                 <td>
-                  <button>View</button>
+                <button type="button" class="btn btn-primary mr-2 " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">View</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Delete</button>
                 </td>
               </tr>
             </tbody>

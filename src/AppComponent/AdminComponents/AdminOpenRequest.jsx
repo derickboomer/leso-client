@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Route, HashRouter, useParams } from "react-router-dom";
+import AdminModal from "../AppModals/AdminModal";
 
 function OpenRequest() {
   
@@ -66,7 +67,7 @@ function OpenRequest() {
           </div>
         </div>
 
-        <div className="mt-2 table">
+        <div className="mt-3 table">
           <div className="filter"></div>
 
           <table
@@ -93,23 +94,29 @@ function OpenRequest() {
 
             <tbody>
               <tr>
-                <td>Rhoderick</td>
-                <td>02145</td>
-                <td>Telescope</td>
-                <td>Repair</td>
-                <td>Jackson</td>
-                <td>Open</td>
-                <td>For Approval</td>
-                <td>On-going</td>
+                
+                <td className="align-middle">Rhoderick</td>
+                <td className="align-middle">02145</td>
+                <td className="align-middle">Telescope</td>
+                <td className="align-middle">Repair</td>
+                <td className="align-middle">Jackson</td>
+                <td className="align-middle">Open</td>
+                <td className="align-middle">For Approval</td>
+                <td className="align-middle">On-going</td>
                 <td>
-                  <button className="mr-1">View</button>
-                  <button>Delete</button>
+                <AdminModal/>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="reg-modal" data-whatever="@mdo">Delete</button>
+                
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
       </span>
+
+      
+
+      
     </React.Fragment>
   );
 }

@@ -9,7 +9,7 @@ function TechnicianClosedRequest() {
 
         <div class=""  className="dashboard wrapper">
         <div class="" style={{ backgroundColor: "white", borderRadius: "5px", boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}} className=" p-3 dashboard wrapper ">
-          <div class="h4 font-weight-bold">Dashboard</div>
+          <div class="h4 font-weight-bold">Closed Request Dashboard</div>
 
           <div class= "d-flex"  className="dashboardcontents">
          
@@ -38,15 +38,14 @@ function TechnicianClosedRequest() {
           </div>
         </div>
 
-        <div
-          className=" mt-3 table"
-          style={{
-            backgroundColor: "white",
-            borderRadius: "5px",
-            boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
-          }}
-        >
-          <table class="shadow-sm table table-striped">
+        <table
+            style={{
+              backgroundColor: "white",
+              borderRadius: "5px",
+              boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+            }}
+            class="mt-3 table table-striped"
+          >
             <thead>
               <tr>
                 <th scope="col">Client Name</th>
@@ -57,23 +56,33 @@ function TechnicianClosedRequest() {
                 <th scope="col">State</th>
                 <th scope="col">Status</th>
                 <th scope="col">Stage</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td>Rhoderick</td>
-                <td>02145</td>
-                <td>Telescope</td>
-                <td>Repair</td>
-                <td>Jackson</td>
-                <td>Good</td>
-                <td>Mark</td>
-                <td>On-going</td>
+                
+                <td className="align-middle">Rhoderick</td>
+                <td className="align-middle">02145</td>
+                <td className="align-middle">Telescope</td>
+                <td className="align-middle">Repair</td>
+                <td className="align-middle">Jackson</td>
+                <td className="align-middle">Open</td>
+                <td className="align-middle">For Approval</td>
+                <td className="align-middle">On-going</td>
+                <td>
+                <button type="button" class="btn btn-primary mr-2 " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">View</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Delete</button>
+                
+
+
+                
+                </td>
               </tr>
             </tbody>
           </table>
-        </div>
+        
       </span>
     </React.Fragment>
   );

@@ -32,9 +32,9 @@ function ClientHomepage() {
 
                   <div class="flex-column font-weight-bold">
                     
-                    <NavLink to="/Client/CreateRequest" activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}}><a class="p-2">Create Request</a></NavLink>
-                    <NavLink to="/Client/Track"activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}}><a class="p-2">Track</a></NavLink>
-                    <NavLink to="/Signout"><a class="p-2">Sign Out</a></NavLink>
+                    <NavLink to="/Client/CreateRequest" style={{padding:"12px"}} activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}}>Create Request</NavLink>
+                    <NavLink to="/Client/Track" style={{padding:"12px"}} activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}}>Track Request</NavLink>
+                    <NavLink to="/Signout" style={{padding:"12px"}}> Log Out</NavLink>
                   </div>
               </div>
 

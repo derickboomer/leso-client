@@ -32,9 +32,9 @@ function TechnicianHomepage() {
 
                   <div class="flex-column font-weight-bold">
                     
-                    <NavLink to="/Technician/OpenRequest" activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}} ><a class="p-2">Open Request</a></NavLink>
-                    <NavLink to="/Technician/ClosedRequest" activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}} ><a class="p-2">Closed Request</a></NavLink>
-                    <NavLink to="/Signout"><a class="p-2">Sign Out</a></NavLink>
+                    <NavLink to="/Technician/OpenRequest"  style={{padding:"12px"}}  activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}} >Open Request</NavLink>
+                    <NavLink to="/Technician/ClosedRequest" style={{padding:"12px"}}  activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}} >Closed Request</NavLink>
+                    <NavLink to="/Signout" style={{padding:"12px"}} >Log Out </NavLink>
                   </div>
               </div>
 

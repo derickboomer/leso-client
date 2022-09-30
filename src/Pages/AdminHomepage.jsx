@@ -5,6 +5,8 @@ import {
   useRouteMatch,
   useParams,
 } from "react-router-dom";
+
+import "react-bootstrap";
 import React from "react";
 import "./Styles/HomepageStyles.css";
 import LesoLogo from "/UST Files/Notes/Capstone/Capstone System/requisitionsystem/src/Assets/LOGONEW.png";
@@ -18,6 +20,8 @@ import Login from "./Login";
 
 function AdminHomepage() {
   let { path, url } = useRouteMatch();
+
+
 
   return (
     <React.Fragment>
@@ -35,12 +39,12 @@ function AdminHomepage() {
 
               <div class = "navigation mt-3">
 
-                  <div class=" flex-column font-weight-bold">
+                  <div class="flex-column font-weight-bold">
                     
-                    <NavLink strict to="/Admin/OpenRequest" activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}}  > <a class="p-2" > Open Request</a></NavLink>
-                    <NavLink strict to="/Admin/ClosedRequest" activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}} ><a class="p-2" >Closed Request</a></NavLink>
-                    <NavLink strict to="/Admin/AccountManagement" activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}} ><a class="p-2" >Account Management</a></NavLink>
-                    <NavLink strict to="/Admin/Signout"><a class="p-2">Sign Out</a></NavLink>
+                    <NavLink strict to="/Admin/OpenRequest" style={{padding:"12px"}} activeStyle={{ color:'black', textDecoration: "none", backgroundColor: "aliceblue"}}>Open Request</NavLink>
+                    <NavLink strict to="/Admin/ClosedRequest" style={{padding:"12px"}} activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}} >Closed Request</NavLink>
+                    <NavLink strict to="/Admin/AccountManagement" style={{padding:"12px"}} activeStyle={{ color:"black", textDecoration: "none", backgroundColor: "aliceblue"}} >Account Management</NavLink>
+                    <NavLink strict to="/Admin/Signout" style={{padding:"12px"}}>Log Out</NavLink>
                   </div>
               </div>
 

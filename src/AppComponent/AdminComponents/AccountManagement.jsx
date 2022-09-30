@@ -36,16 +36,16 @@ function AccountManagement() {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody >
             <tr>
-              <td>USER_01</td>
-              <td>Vince</td>
-              <td>Marcelo</td>
-              <td>marcelo.vince@ust.edu.ph</td>
-              <td>Admin</td>
+              <td className="align-middle">USER_01</td>
+              <td className="align-middle">Vince</td>
+              <td className="align-middle">Marcelo</td>
+              <td className="align-middle">marcelo.vince@ust.edu.ph</td>
+              <td className="align-middle">Admin</td>
               <td>
-                <button className="mr-1">Edit</button>
-                <button>Delete</button>
+              <button type="button" class="btn btn-primary mr-2 " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">View</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Delete</button>
               </td>
             </tr>
           </tbody>

@@ -6,6 +6,7 @@ import {
   Switch,
   NavLink,
 } from "react-router-dom";
+import AdminModal from "../AppComponent/AppModals/AdminModal";
 import Admin from "../Pages/AdminHomepage";
 import ClientHomepage from "../Pages/ClientHomepage";
 import Login from "../Pages/Login";
@@ -28,11 +29,15 @@ function RoutingTry() {
           <NavLink to="/Client/CreateRequest">
             <a class="p-2">Client</a>
           </NavLink>
+          <NavLink to="/Modal">
+            <a class="p-2">Modal</a>
+          </NavLink>
         </div>
         <Route path="/Login" component={Login} />
         <Route path="/Admin" component={Admin} />
         <Route path="/Technician" component={TechnicianHomepage} />
         <Route path="/Client" component={ClientHomepage} />
+        <Route path="/Modal" component={AdminModal} />
       </Router>
     </React.Fragment>
   );
