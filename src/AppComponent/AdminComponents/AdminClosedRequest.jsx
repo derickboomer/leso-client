@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Route, HashRouter } from "react-router-dom";
+import AdminModal from "../AppModals/AdminModal";
 
 function AdminClosedRequest() {
   return (
@@ -69,7 +70,7 @@ function AdminClosedRequest() {
                 <td className="align-middle">Jackson</td>
                 <td className="align-middle">Completed</td>
                 <td>
-                <button type="button" class="btn btn-primary mr-2 " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">View</button>
+                <AdminModal/>
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Delete</button>
                 </td>
               </tr>

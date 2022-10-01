@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { ModalHeader } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function AdminAccountManagementModal() {
+function TechnicianModal() {
   const [lgshow, setlgshow] = useState(false);
   const handleClose = () => setlgshow(false);
   const handleShow = () => setlgshow(true);
@@ -14,10 +13,8 @@ function AdminAccountManagementModal() {
         View Request
       </button>
 
-      <Modal size="lg" centered show={lgshow} onHide={handleClose} backdrop="static" keyboard={false}>
+      <Modal size="lg" show={lgshow} onHide={handleClose} backdrop="static" keyboard={false}>
      
-    
-
       <div  class="modalcss mb-2 bg-white rounded-top ">
             <div class=" p-3 form-row">{/* Row 1 */}
               <div class="col">
@@ -182,4 +179,4 @@ function AdminAccountManagementModal() {
   );
 }
 
-export default AdminAccountManagementModal;
+export default TechnicianModal;

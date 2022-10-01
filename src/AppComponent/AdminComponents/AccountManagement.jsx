@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink, Route, HashRouter } from "react-router-dom";
+import AdminAccountManagementModal from "../AppModals/AdminAccountManagementModal";
+import AdminCreateAccountModal from "../AppModals/AdminCreateAccountModal";
 
 function AccountManagement() {
   return (
@@ -14,9 +16,17 @@ function AccountManagement() {
           boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
         }}
       >
-        <div className="p-2 title h1 font-weight-bold d-flex justify-content-center">
-          Account Management
-        </div>
+        
+        <div className="p-3 h2 font-weight-bold rounded d-flex justify-content-between "> {/* Job Order Form */}
+                <div>
+                    Account Management
+                </div>
+                <AdminCreateAccountModal/>
+            </div>
+              
+
+              
+           
 
         <table
           style={{
@@ -44,7 +54,7 @@ function AccountManagement() {
               <td className="align-middle">marcelo.vince@ust.edu.ph</td>
               <td className="align-middle">Admin</td>
               <td>
-              <button type="button" class="btn btn-primary mr-2 " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">View</button>
+              <AdminAccountManagementModal/>
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Delete</button>
               </td>
             </tr>
