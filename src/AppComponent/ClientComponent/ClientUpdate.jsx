@@ -59,7 +59,9 @@ const ClientUpdate = () => {
   // Use Effect to render after Load
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/joborderupdate/${idjob_order}`)
+      .get(
+        `https://camrs-leso-deployment.herokuapp.com/joborderupdate/${idjob_order}`
+      )
       .then((res) => setJobOrder({ ...res.data[0] }));
   }, [idjob_order]);
 
@@ -73,7 +75,10 @@ const ClientUpdate = () => {
   const handleRating = () => {
     console.log(performance);
     axios
-      .put(`http://localhost:3001/performance/${idjob_order}`, joborder)
+      .put(
+        `https://camrs-leso-deployment.herokuapp.com/performance/${idjob_order}`,
+        joborder
+      )
       .then(() => {
         setJobOrder({
           performance: "",
@@ -95,13 +100,17 @@ const ClientUpdate = () => {
   // admin list render
   const [admin, setadmin] = useState([]);
   const loadAdminlist = async () => {
-    const response = await axios.get("http://localhost:3001/admin");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/admin"
+    );
     setadmin(response.data);
   };
 
   const [technician, settechnician] = useState([]);
   const loadTechnicianlist = async () => {
-    const response = await axios.get("http://localhost:3001/technician");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/technician"
+    );
     settechnician(response.data);
   };
 

@@ -65,7 +65,9 @@ const ClosedJobOrder = () => {
   // Use Effect to render after Load
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/joborderupdate/${idjob_order}`)
+      .get(
+        `https://camrs-leso-deployment.herokuapp.com/joborderupdate/${idjob_order}`
+      )
       .then((res) => setJobOrder({ ...res.data[0] }));
   }, [idjob_order]);
 
@@ -79,7 +81,10 @@ const ClosedJobOrder = () => {
   const handleSubmit = () => {
     console.log(idjob_order);
     axios
-      .put(`http://localhost:3001/openjoborderupdate/${idjob_order}`, joborder)
+      .put(
+        `https://camrs-leso-deployment.herokuapp.com/openjoborderupdate/${idjob_order}`,
+        joborder
+      )
       .then(() => {
         setJobOrder({
           type: "",

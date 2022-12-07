@@ -100,7 +100,10 @@ function CreateRequest() {
     }, 50);
   }
   const submitJobOrder = () => {
-    axios.post("http://localhost:3001/submitjoborder", joborder);
+    axios.post(
+      "https://camrs-leso-deployment.herokuapp.com/submitjoborder",
+      joborder
+    );
     refresh();
   };
 

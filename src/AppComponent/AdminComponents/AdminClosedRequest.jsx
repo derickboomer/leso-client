@@ -22,7 +22,9 @@ function AdminClosedRequest() {
   }
   // Delete Job Order
   const deleteJobOrder = (joborder) => {
-    axios.delete(`http://localhost:3001/deletejoborder/${joborder}`);
+    axios.delete(
+      `https://camrs-leso-deployment.herokuapp.com/deletejoborder/${joborder}`
+    );
     alert("Are you sure you want to delete this account?");
   };
 
@@ -34,24 +36,32 @@ function AdminClosedRequest() {
 
   // Load Request
   const loadRequest = async () => {
-    const response = await axios.get("http://localhost:3001/closedrequest");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedrequest"
+    );
     setrequest(response.data);
   };
 
   const loadCount = async () => {
-    const response = await axios.get("http://localhost:3001/closedrequest");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedrequest"
+    );
     settotalrequest(response.data);
   };
 
   // Completed Counter
   const Approved = async () => {
-    const response = await axios.get("http://localhost:3001/closedapproved");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedapproved"
+    );
     setcompletedcounter(response.data);
   };
 
   // Declined Counter
   const Declined = async () => {
-    const response = await axios.get("http://localhost:3001/closeddeclined");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closeddeclined"
+    );
     setcancelledcounter(response.data);
   };
 
@@ -64,17 +74,23 @@ function AdminClosedRequest() {
   }, []);
 
   const RenderTotal = async () => {
-    const response = await axios.get("http://localhost:3001/closedrequest");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedrequest"
+    );
     setrequest(response.data);
   };
 
   const RenderApproved = async () => {
-    const response = await axios.get("http://localhost:3001/closedapproved");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedapproved"
+    );
     setrequest(response.data);
   };
 
   const RenderDeclined = async () => {
-    const response = await axios.get("http://localhost:3001/closeddeclined");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closeddeclined"
+    );
     setrequest(response.data);
   };
 
