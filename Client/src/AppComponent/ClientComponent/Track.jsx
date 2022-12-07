@@ -12,7 +12,7 @@ function Track() {
   const Track = async () => {
     console.log(trackingnumber);
     axios
-      .post("http://localhost:3001/track", {
+      .post("https://camrs-leso-deployment.herokuapp.com/track", {
         trackingnumber: trackingnumber,
       })
       .then((response) => {

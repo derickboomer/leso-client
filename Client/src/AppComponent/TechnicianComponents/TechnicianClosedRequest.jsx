@@ -20,33 +20,39 @@ function TechnicianClosedRequest() {
   }
 
   const deleteAccount = (joborder) => {
-    axios.delete(`http://localhost:3001/deletejoborder/${joborder}`);
+    axios.delete(
+      `https://camrs-leso-deployment.herokuapp.com/deletejoborder/${joborder}`
+    );
     refresh();
   };
   // Load All Request
   const loadRequest = async () => {
     const response = await axios.get(
-      "http://localhost:3001/technicianclosedrequest"
+      "https://camrs-leso-deployment.herokuapp.com/technicianclosedrequest"
     );
     setrequest(response.data);
   };
 
   const loadCount = async () => {
     const response = await axios.get(
-      "http://localhost:3001/technicianclosedrequest"
+      "https://camrs-leso-deployment.herokuapp.com/technicianclosedrequest"
     );
     settotalrequest(response.data);
   };
 
   // Technician Closed Completed Counter
   const ClosedCompleted = async () => {
-    const response = await axios.get("http://localhost:3001/closedcompleted");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedcompleted"
+    );
     setclosedcompleted(response.data);
   };
 
   // Technician Closed Cancelled Counter
   const ClosedCancelled = async () => {
-    const response = await axios.get("http://localhost:3001/closedcancelled");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedcancelled"
+    );
     setclosedcancelled(response.data);
   };
 
@@ -59,12 +65,16 @@ function TechnicianClosedRequest() {
   }, []);
 
   const RenderClosedCompleted = async () => {
-    const response = await axios.get("http://localhost:3001/closedcompleted");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedcompleted"
+    );
     setrequest(response.data);
   };
 
   const RenderClosedCancelled = async () => {
-    const response = await axios.get("http://localhost:3001/closedcancelled");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/closedcancelled"
+    );
     setrequest(response.data);
   };
 

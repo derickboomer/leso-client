@@ -24,7 +24,9 @@ const AccountUpdate = () => {
   // Use Effect to render after Load
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/update/get/${iduser_account}`)
+      .get(
+        `https://camrs-leso-deployment.herokuapp.com/update/get/${iduser_account}`
+      )
       .then((res) => setAccount({ ...res.data[0] }));
   }, [iduser_account]);
 
@@ -32,7 +34,10 @@ const AccountUpdate = () => {
   const handleSubmit = () => {
     console.log(iduser_account);
     axios
-      .put(`http://localhost:3001/update/${iduser_account}`, account)
+      .put(
+        `https://camrs-leso-deployment.herokuapp.com/update/${iduser_account}`,
+        account
+      )
       .then(() => {
         setAccount({
           firstName: "",

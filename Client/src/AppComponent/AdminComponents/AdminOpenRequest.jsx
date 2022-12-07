@@ -28,41 +28,55 @@ function OpenRequest() {
   // Delete Job Order
 
   const deleteJobOrder = (joborder) => {
-    axios.delete(`http://localhost:3001/deletejoborder/${joborder}`);
+    axios.delete(
+      `https://camrs-leso-deployment.herokuapp.com/deletejoborder/${joborder}`
+    );
     alert("Are you sure you want to delete this account?");
     refresh();
   };
 
   // Load All Request
   const loadRequest = async () => {
-    const response = await axios.get("http://localhost:3001/openrequest");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/openrequest"
+    );
     setrequest(response.data);
   };
 
   const loadCount = async () => {
-    const response = await axios.get("http://localhost:3001/openrequest");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/openrequest"
+    );
     settotalrequest(response.data);
   };
 
   // For Approval Counter
   const forApproval = async () => {
-    const response = await axios.get("http://localhost:3001/counter");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/counter"
+    );
     setforapprovalcounter(response.data);
   };
 
   // Approved Counter
   const Approved = async () => {
-    const response = await axios.get("http://localhost:3001/approvedcounter");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/approvedcounter"
+    );
     setapprovedcounter(response.data);
   };
 
   const RenderCompleted = async () => {
-    const response = await axios.get("http://localhost:3001/rendercompleted");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/rendercompleted"
+    );
     setcompleted(response.data);
   };
 
   const RenderCancelled = async () => {
-    const response = await axios.get("http://localhost:3001/rendercancelled");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/rendercancelled"
+    );
     setcancelled(response.data);
   };
 
@@ -77,27 +91,37 @@ function OpenRequest() {
   }, []);
 
   const RenderTotal = async () => {
-    const response = await axios.get("http://localhost:3001/openrequest");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/openrequest"
+    );
     setrequest(response.data);
   };
 
   const RenderforApproval = async () => {
-    const response = await axios.get("http://localhost:3001/counter");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/counter"
+    );
     setrequest(response.data);
   };
 
   const RenderApproved = async () => {
-    const response = await axios.get("http://localhost:3001/approvedcounter");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/approvedcounter"
+    );
     setrequest(response.data);
   };
 
   const RenderCompletedList = async () => {
-    const response = await axios.get("http://localhost:3001/rendercompleted");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/rendercompleted"
+    );
     setrequest(response.data);
   };
 
   const RenderCancelledList = async () => {
-    const response = await axios.get("http://localhost:3001/rendercancelled");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/rendercancelled"
+    );
     setrequest(response.data);
   };
 

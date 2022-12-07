@@ -23,28 +23,32 @@ function TechnicianOpenRequest() {
   }
 
   const deleteAccount = (joborder) => {
-    axios.delete(`http://localhost:3001/deletejoborder/${joborder}`);
+    axios.delete(
+      `https://camrs-leso-deployment.herokuapp.com/deletejoborder/${joborder}`
+    );
     refresh();
   };
 
   // Load All Request
   const loadRequest = async () => {
     const response = await axios.get(
-      "http://localhost:3001/technicianopenrequest"
+      "https://camrs-leso-deployment.herokuapp.com/technicianopenrequest"
     );
     setrequest(response.data);
   };
 
   const loadCount = async () => {
     const response = await axios.get(
-      "http://localhost:3001/technicianopenrequest"
+      "https://camrs-leso-deployment.herokuapp.com/technicianopenrequest"
     );
     settotalrequest(response.data);
   };
 
   // RenderPickUpCount
   const RenderPickUpCount = async () => {
-    const response = await axios.get("http://localhost:3001/renderpickupcount");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/renderpickupcount"
+    );
 
     setrenderpickupcount(response.data);
   };
@@ -52,7 +56,7 @@ function TechnicianOpenRequest() {
   // RenderDrop-OffCount
   const RenderDropOffCount = async () => {
     const response = await axios.get(
-      "http://localhost:3001/renderdropoffcount"
+      "https://camrs-leso-deployment.herokuapp.com/renderdropoffcount"
     );
 
     setdropoffcount(response.data);
@@ -60,19 +64,25 @@ function TechnicianOpenRequest() {
 
   // Render Pending Count >> Recieved changed to Pending
   const RenderRecieved = async () => {
-    const response = await axios.get("http://localhost:3001/renderrecieved");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/renderrecieved"
+    );
     setrecieved(response.data);
   };
 
   // Render Inspection Count
   const RenderCompleted = async () => {
-    const response = await axios.get("http://localhost:3001/rendercompleted");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/rendercompleted"
+    );
     setcompleted(response.data);
   };
 
   // Render On Going Count
   const RenderCancelled = async () => {
-    const response = await axios.get("http://localhost:3001/rendercancelled");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/rendercancelled"
+    );
     setcancelled(response.data);
   };
 
@@ -81,36 +91,44 @@ function TechnicianOpenRequest() {
 
   const RenderTotal = async () => {
     const response = await axios.get(
-      "http://localhost:3001/technicianopenrequest"
+      "https://camrs-leso-deployment.herokuapp.com/technicianopenrequest"
     );
     setrequest(response.data);
   };
 
   const RenderPickUpList = async () => {
-    const response = await axios.get("http://localhost:3001/renderpickupcount");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/renderpickupcount"
+    );
     setrequest(response.data);
   };
 
   const RenderDropOffList = async () => {
     console.log(dropoffcount);
     const response = await axios.get(
-      "http://localhost:3001/renderdropoffcount"
+      "https://camrs-leso-deployment.herokuapp.com/renderdropoffcount"
     );
     setrequest(response.data);
   };
 
   const RenderRecievedList = async () => {
-    const response = await axios.get("http://localhost:3001/renderrecieved");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/renderrecieved"
+    );
     setrequest(response.data);
   };
 
   const RenderCompletedList = async () => {
-    const response = await axios.get("http://localhost:3001/rendercompleted");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/rendercompleted"
+    );
     setrequest(response.data);
   };
 
   const RenderCancelledList = async () => {
-    const response = await axios.get("http://localhost:3001/rendercancelled");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/rendercancelled"
+    );
     setrequest(response.data);
   };
 

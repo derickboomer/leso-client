@@ -23,7 +23,9 @@ function AccountManagement() {
   }
 
   const loadList = async () => {
-    const response = await axios.get("http://localhost:3001/accounts");
+    const response = await axios.get(
+      "https://camrs-leso-deployment.herokuapp.com/accounts"
+    );
     setData(response.data);
   };
 
@@ -32,7 +34,9 @@ function AccountManagement() {
   }, []);
 
   const deleteAccount = (account) => {
-    axios.delete(`http://localhost:3001/delete/${account}`);
+    axios.delete(
+      `https://camrs-leso-deployment.herokuapp.com/delete/${account}`
+    );
     alert("Are you sure you want to delete this account?");
     refresh();
   };
